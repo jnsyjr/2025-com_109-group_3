@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Steven Gerrard",
+    "image": "/photos/players/gerrard.webp",
+    "description": "Legendary captain with unmatched leadership and long-range goals.",
+    "bio": "Steven Gerrard spent the majority of his career at Liverpool, captaining the team through some of its most iconic moments. He made 710 appearances, scoring 185 goals. Gerrard led Liverpool to a historic Champions League win in 2005 and is widely considered one of the greatest midfielders in Premier League history."
+  },
+  {
+    "id": 2,
+    "title": "Kenny Dalglish",
+    "image": "/photos/players/dalglish.jpeg",
+    "description": "Icon as both player and manager, bringing class and titles to Anfield.",
+    "bio": "Dalglish joined Liverpool from Celtic in 1977 and became an instant hero. As a player, he won six league titles and three European Cups. Later, he returned as a manager, guiding the club through challenging times. 'King Kenny' is revered not just for his talent, but for his deep loyalty to the club."
+  },
+  {
+    "id": 3,
+    "title": "Ian Rush",
+    "image": "/photos/players/ian_rush.jpeg",
+    "description": "Liverpool’s all-time leading goalscorer with over 340 goals.",
+    "bio": "Rush played two spells at Liverpool, becoming the club's top scorer with 346 goals in all competitions. He was vital in Liverpool’s dominance in the 1980s, winning five league titles and two European Cups. His sharp instinct in the box made him a nightmare for defenders."
+  },
+  {
+    "id": 4,
+    "title": "Mohamed Salah",
+    "image": "/photos/players/salah.jpg",
+    "description": "Modern-day icon known for pace, precision, and record-breaking goals.",
+    "bio": "Since joining in 2017, Salah has become a modern legend, helping Liverpool win the Champions League in 2019 and the Premier League in 2020. He's broken club and Premier League records, becoming one of the fastest to reach 100 goals and a global ambassador for the Reds."
+  },
+  {
+    "id": 5,
+    "title": "Virgil van Dijk",
+    "image": "/photos/players/vandike_photo.webp",
+    "description": "Transformed the defense with leadership and composure.",
+    "bio": "Van Dijk arrived from Southampton in 2018 for a then-record fee for a defender. He quickly became a defensive rock, leading Liverpool to a Champions League win and a long-awaited Premier League title. He is admired for his calm, aerial dominance, and leadership."
+  },
+  {
+    "id": 6,
+    "title": "Alisson Becker",
+    "image": "/photos/players/allison.jpeg",
+    "description": "World-class goalkeeper behind many of Liverpool’s modern successes.",
+    "bio": "Signed in 2018, Alisson played a crucial role in stabilizing Liverpool’s defense. Known for his shot-stopping, distribution, and calm under pressure, he has won numerous individual awards and even scored a memorable goal against West Brom in 2021 to keep Champions League hopes alive."
+  }
+]

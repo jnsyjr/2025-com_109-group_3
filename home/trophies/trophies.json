@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Premier League / First Division",
+    "image": "/photos/trophies/prem.webp",
+    "description": "19 Titles — Most recently: 2019–20",
+    "history": "Liverpool has won the English top-flight title 19 times. Their dominance in the 1970s and 1980s under managers like Bob Paisley and Kenny Dalglish was unrivaled. In 2020, Jürgen Klopp's team ended a 30-year wait for the title with a record-breaking season."
+  },
+  {
+    "id": 2,
+    "title": "FA Cup",
+    "image": "/photos/trophies/FA.webp",
+    "description": "8 Titles — Most recently: 2021–22",
+    "history": "The FA Cup has long been a cherished competition for Liverpool. From their first win in 1965 to dramatic finals in 2001 and 2006, the club’s success in this tournament highlights their ability to shine on big occasions."
+  },
+  {
+    "id": 3,
+    "title": "League Cup",
+    "image": "/photos/trophies/leauge.jpg",
+    "description": "9 Titles — Most recently: 2023–24",
+    "history": "Liverpool has a rich legacy in the League Cup, particularly during the early 1980s when they won four consecutive titles. The competition has offered opportunities for young talents to shine, especially under Klopp."
+  },
+  {
+    "id": 4,
+    "title": "FA Community Shield",
+    "image": "/photos/trophies/comunity_shield.jpeg",
+    "description": "15 Shields — Most recently: 2022",
+    "history": "The Community Shield, though seen as a season opener, has often reflected Liverpool’s standing as one of England’s most consistent sides. The club has used it as a platform to kick off campaigns with confidence."
+  },
+  {
+    "id": 5,
+    "title": "UEFA Champions League",
+    "image": "/photos/trophies/champions.webp",
+    "description": "6 Titles — Most recently: 2018–19",
+    "history": "Liverpool’s relationship with the European Cup is historic. From the glory days of the 1970s and 1980s to the unforgettable 2005 comeback in Istanbul, the club’s European legacy is unmatched among English teams."
+  },
+  {
+    "id": 6,
+    "title": "UEFA Super Cup",
+    "image": "/photos/trophies/super_cup.webp",
+    "description": "4 Titles — Most recently: 2019",
+    "history": "Each Super Cup victory has followed a major European triumph. The 2019 win against Chelsea on penalties was a testament to Liverpool’s resilience and squad depth."
+  },
+  {
+    "id": 7,
+    "title": "UEFA Europa League / UEFA Cup",
+    "image": "/photos/trophies/UEFA.jpg",
+    "description": "3 Titles — Most recently: 2000–01",
+    "history": "Liverpool has lifted the UEFA Cup three times, with the 2001 victory under Gérard Houllier part of a treble-winning season. The competition has long served as a proving ground for upcoming talent and squad evolution."
+  },
+  {
+    "id": 8,
+    "title": "FIFA Club World Cup",
+    "image": "/photos/trophies/Club-World-Cup.jpg",
+    "description": "1 Title — Year: 2019",
+    "history": "Liverpool won their first Club World Cup in 2019 in Qatar after beating Flamengo. The victory symbolized the club’s return to the pinnacle of global football under Klopp."
+  }
+]
