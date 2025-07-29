@@ -58,30 +58,7 @@ function loadCards(jsonPath, containerSelector, detailSelector) {
           // Determine extra content based on data source
           let extraContent = "";
 
-          if (jsonPath.includes("products.json")) {
-            extraContent = `${
-              cardData.price
-                ? `<p style="font-weight:bold; margin-top:0.5rem;">${cardData.price}</p>`
-                : ""
-            }
-            <div style="display: flex; justify-content: center; align-items: center; gap: 1rem;">
-              <select id="size-select" style="padding: 0.3rem;">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-              </select>
-              <button disabled style="
-                background-color: #ccc;
-                color: #333;
-                padding: 0.5rem 1rem;
-                border: none;
-                cursor: not-allowed;
-                opacity: 0.7;
-              ">Sold Out</button>
-            </div>
-          `;
-          } else if (jsonPath.includes("players.json")) {
+          if (jsonPath.includes("players.json")) {
             extraContent = `
               <h3 style="margin-top:1.5rem;">Biography</h3>
               <p>${cardData.bio || "Biography not available."}</p>
@@ -122,10 +99,6 @@ function loadCards(jsonPath, containerSelector, detailSelector) {
 
 $(document).ready(function () {
   $("#navbar-placeholder").load("/navbar/navbar.html");
-
-  if ($("#shop-container").length) {
-    loadCards("./products.json", "#shop-container", "#product-detail");
-  }
 
   if ($("#players-container").length) {
     loadCards("./players.json", "#players-container", "#player-detail");
