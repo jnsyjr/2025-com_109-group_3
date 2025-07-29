@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Liverpool FC Trophies</title>
+    <link rel="stylesheet" href="/project.css" />
+    <link rel="stylesheet" href="/card.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="navbar-placeholder"></div>
+    </header>
+
+    <main>
+      <section class="trophy-intro">
+        <h1 style="text-align: center; margin-top: 2rem">
+          Liverpool FC – Trophies & Honors
+        </h1>
+        <p
+          style="
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+            padding: 1rem;
+          "
+        >
+          Liverpool Football Club is one of the most decorated clubs in world
+          football. Here’s a breakdown of the major trophies the Reds have won.
+        </p>
+      </section>
+
+      <section id="trophy-container"></section>
+
+      <!-- Trophy Detail View -->
+      <section
+        id="trophy-detail"
+        style="display: none; padding: 2rem; max-width: 900px; margin: auto"
+      >
+        <button id="trophy-back-button" style="margin-bottom: 1rem">
+          &larr; Back
+        </button>
+        <h2 id="trophy-title"></h2>
+        <img
+          id="trophy-image"
+          src=""
+          alt="Trophy Image"
+          style="
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            margin-top: 1rem;
+          "
+        />
+        <p id="trophy-description" style="margin-top: 1rem"></p>
+        <h3 style="margin-top: 2rem">Trophy History</h3>
+        <p id="trophy-history"></p>
+      </section>
+
+      <p
+        style="
+          text-align: center;
+          font-size: 0.8rem;
+          color: #555;
+          margin-top: 2rem;
+        "
+      >
+        * Trophy counts include First Division wins before the Premier League
+        era.
+      </p>
+    </main>
+
+    <footer>
+      <p style="text-align: center; padding: 1rem">
+        &copy; 2025 Liverpool FC Fan Page
+      </p>
+    </footer>
+
+    <script src="/project.js"></script>
+  </body>
+</html>
