@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Liverpool FC Legends</title>
+    <link rel="stylesheet" href="/project.css" />
+    <link rel="stylesheet" href="/card.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="navbar-placeholder"></div>
+    </header>
+
+    <main>
+      <h1 style="text-align: center; margin-top: 2rem">Liverpool FC Legends</h1>
+      <section id="players-container"></section>
+
+      <!-- Player Detail View -->
+      <section
+        id="player-detail"
+        style="
+          display: none;
+          padding: 2rem;
+          padding-top: 0px;
+          max-width: 900px;
+          margin: auto;
+        "
+      >
+        <button id="player-back-button" style="margin-bottom: 1rem">
+          &larr; Back
+        </button>
+        <h2 id="player-name"></h2>
+        <img
+          id="player-image"
+          src=""
+          alt="Player Image"
+          style="
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            margin-top: 1rem;
+          "
+        />
+        <p id="player-bio" style="margin-top: 1rem"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p style="text-align: center; padding: 1rem">
+        &copy; 2025 Liverpool FC Legends Page
+      </p>
+    </footer>
+
+    <script src="/project.js"></script>
+  </body>
+</html>
