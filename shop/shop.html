@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Liverpool FC Shop</title>
+    <link rel="stylesheet" href="/project.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="navbar-placeholder"></div>
+    </header>
+
+    <main>
+      <!-- Main Shop View -->
+      <div id="shop-container"></div>
+
+      <!-- Detail View (Hidden Initially) -->
+      <section
+        id="product-detail"
+        class="product-detail-section"
+        style="display: none"
+      >
+        <div
+          class="product-detail-wrapper"
+          style="max-width: 700px; margin: auto; padding: 2rem"
+        >
+          <button
+            id="back-button"
+            class="back-button"
+            style="margin-bottom: 1rem"
+          >
+            ← Back to Shop
+          </button>
+
+          <div class="card-details">
+            <img
+              id="detail-image"
+              class="card-details-image"
+              alt="Product image"
+            />
+
+            <div class="card-content">
+              <h3 id="detail-title" class="card-title"></h3>
+              <p id="detail-description" class="card-description"></p>
+
+              <div
+                class="product-detail-footer"
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  margin-top: 1rem;
+                "
+              >
+                <p id="detail-price" style="font-weight: bold"></p>
+                <button class="sold-out-button" disabled>Sold Out</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p style="text-align: center; padding: 1rem">
+        &copy; 2025 Liverpool FC Shop
+      </p>
+    </footer>
+
+    <script src="/project.js"></script>
+    <script src="./shop.js"></script>
+  </body>
+</html>

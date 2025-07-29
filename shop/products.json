@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Home Jersey 2024",
+    "image": "/photos/shop/homeshirt.jpeg",
+    "description": "Official Liverpool FC home shirt for the 2024 season.",
+    "price": "£74.99"
+  },
+  {
+    "id": 2,
+    "title": "Scarf – You'll Never Walk Alone",
+    "image": "/photos/shop/scarf.jpeg",
+    "description": "Iconic Liverpool scarf for true fans.",
+    "price": "£14.99"
+  },
+  {
+    "id": 3,
+    "title": "Training Jacket",
+    "image": "/photos/shop/jacket.jpeg",
+    "description": "Wear what the players wear during training.",
+    "price": "£59.99"
+  },
+  {
+    "id": 4,
+    "title": "Anfield Mug",
+    "image": "/photos/shop/mug.jpeg",
+    "description": "Classic mug with Anfield print.",
+    "price": "£9.99"
+  },
+  {
+    "id": 5,
+    "title": "Retro Jersey 1984",
+    "image": "/photos/shop/retro-shirt.webp",
+    "description": "Celebrate the glory days with this retro 1984 kit.",
+    "price": "£49.99"
+  },
+  {
+    "id": 6,
+    "title": "LFC Beanie Hat",
+    "image": "/photos/shop/beanie.jpeg",
+    "description": "Keep warm and show your pride with the LFC beanie.",
+    "price": "£19.99"
+  }
+]
