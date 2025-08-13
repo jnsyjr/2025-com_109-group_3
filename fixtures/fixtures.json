@@ -1,0 +1,123 @@
+{
+  "previousGames": [
+    {
+      "title": "Crystal Palace",
+      "description": "A dramatic Community Shield match at Wembley.",
+      "date": "2025-08-10",
+      "winner": "Crystal Palace",
+      "score": "2–2 (4–5 on penalties)"
+    },
+    {
+      "title": "AC Milan",
+      "description": "A high-scoring friendly encounter.",
+      "date": "2025-07-20",
+      "winner": "AC Milan",
+      "score": "2–4"
+    },
+    {
+      "title": "Stoke City",
+      "description": "A dominant performance in a pre-season friendly.",
+      "date": "2025-07-13",
+      "winner": "Liverpool",
+      "score": "5–0"
+    },
+    {
+      "title": "Preston North End",
+      "description": "A solid win in a pre-season match.",
+      "date": "2025-07-06",
+      "winner": "Liverpool",
+      "score": "3–1"
+    },
+    {
+      "title": "Marinos",
+      "description": "A convincing victory in the Japanese J.League World Challenge.",
+      "date": "2025-06-26",
+      "winner": "Liverpool",
+      "score": "3–1"
+    },
+    {
+      "title": "Leeds United",
+      "description": "A pre-season friendly in Asia.",
+      "date": "2025-06-20",
+      "winner": "Liverpool",
+      "score": "2–0"
+    },
+    {
+      "title": "Borussia Dortmund",
+      "description": "A competitive pre-season match in Germany.",
+      "date": "2025-06-15",
+      "winner": "Liverpool",
+      "score": "1–0"
+    },
+    {
+      "title": "Real Madrid",
+      "description": "A high-profile friendly in the United States.",
+      "date": "2025-06-10",
+      "winner": "Liverpool",
+      "score": "2–1"
+    },
+    {
+      "title": "Bayern Munich",
+      "description": "A challenging pre-season fixture in Asia.",
+      "date": "2025-06-05",
+      "winner": "Liverpool",
+      "score": "3–2"
+    }
+  ],
+  "futureGames": [
+    {
+      "title": "AFC Bournemouth",
+      "description": "The season opener at Anfield.",
+      "date": "2025-08-15",
+      "kickoff": "12:00 BST"
+    },
+    {
+      "title": "Newcastle United",
+      "description": "A challenging fixture at Anfield.",
+      "date": "2025-08-25",
+      "kickoff": "12:00 BST"
+    },
+    {
+      "title": "Arsenal",
+      "description": "A top-of-the-table clash at Anfield.",
+      "date": "2025-08-31",
+      "kickoff": "08:30 BST"
+    },
+    {
+      "title": "Burnley",
+      "description": "An away match at Turf Moor.",
+      "date": "2025-09-14",
+      "kickoff": "06:00 BST"
+    },
+    {
+      "title": "Everton",
+      "description": "The Merseyside derby at Anfield.",
+      "date": "2025-09-20",
+      "kickoff": "04:30 BST"
+    },
+    {
+      "title": "Crystal Palace",
+      "description": "A home fixture against the Eagles.",
+      "date": "2025-09-27",
+      "kickoff": "07:00 BST"
+    },
+    {
+      "title": "Chelsea",
+      "description": "A high-stakes match at Anfield.",
+      "date": "2025-10-04",
+      "kickoff": "07:00 BST"
+    },
+    {
+      "title": "Manchester United",
+      "description": "The historic rivalry at Anfield.",
+      "date": "2025-10-18",
+      "kickoff": "07:00 BST"
+    },
+    {
+      "title": "Brentford",
+      "description": "A home game against the Bees.",
+      "date": "2025-10-25",
+      "kickoff": "07:00 BST"
+    }
+  ]
+}

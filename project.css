@@ -116,6 +116,7 @@ button:hover {
 #content,
 #page-title {
   margin-top: 20px;
+  text-align: center;
 }
 
 .hidden {
@@ -147,7 +148,7 @@ p {
   color: black;
 }
 /* Card Container - centers the card */
-.card-container {
+.card-container .card-section {
   display: flex;
   justify-content: center;
   align-items: center;
