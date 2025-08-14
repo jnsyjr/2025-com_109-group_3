@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Liverpool FC - Home</title>
+    <link rel="stylesheet" href="/project.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="navbar-placeholder"></div>
+    </header>
+
+  <main>
+    <section id="page-title">
+      <h2>Previous and Upcoming Fixtures</h2>
+      <p>Below you can find our previous and upcoming games!</p>
+      <p>Feel free to select your favourites!</p>
+    </section>
+
+    <h2>Previous Games:</h2>
+    <div id="previous-games" class="card-container"></div>
+
+    <h2>Future Games:</h2>
+    <div id="future-games" class="card-container"></div>
+
+    <template id="card-template">
+      <div class="card">
+        <div class="card-content">
+          <h3 class="card-title"></h3>
+          <h3 class="card-winner-or-kickoff"></h3>
+          <h3 class = "date"></h4>
+          <h3 class = "kickoff"></h3>
+          <p class="card-description"></p>
+          <a href="#" class="card-button">Pin Game</a>
+        </div>
+      </div>
+    </template>
+  </main>
+
+    <footer>
+      <p style="text-align: center; padding: 1rem">
+        &copy; 2025 Liverpool FC Fan Page
+      </p>
+    </footer>
+
+    <script src="./fixtures.js" defer></script>
+    <script src="/project.js" defer></script>
+  </body>
+</html>
