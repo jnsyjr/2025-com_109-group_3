@@ -11,7 +11,13 @@ function renderCardSections(containerId, cardsData) {
       const cardClone = template.cloneNode(true);
       cardClone.querySelector(".card-title").textContent = card.title;
       cardClone.querySelector(".card-description").textContent = card.description;
-      cardClone.querySelector(".card-winner").textContent = "Winner: " + card.winner
+      cardClone.querySelector(".date").textContent = card.date;
+      const winnerEl = cardClone.querySelector(".card-winner-or-kickoff");
+      if (card.winner) {
+        winnerEl.textContent = "Winner: " + card.winner;
+      } else {
+        winnerEl.textContent = "Kickoff: " + card.kickoff;
+      }
       cardClone.querySelector(".card-button").href = card.link;
       section.appendChild(cardClone);
     });
@@ -23,5 +29,5 @@ function renderCardSections(containerId, cardsData) {
 
 $.getJSON('./fixtures.json', function (data) {
   renderCardSections('previous-games', data.previousGames);
-  renderCardSections('future-games', data.previousGames);
+  renderCardSections('future-games', data.futureGames);
 });
