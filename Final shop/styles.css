@@ -1,0 +1,361 @@
+                    /* Variables  */
+:root {
+  --bg: #ffffff;
+  --ink: #111;
+  --muted: #6b7280;
+  --brand: #d71920; /* LFC red-ish */
+  --card: #fff;
+  --stroke: #e5e7eb;
+  --radius: 18px;
+  --shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+                      /*  Reset & Base */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 28px 20px 60px;
+}
+
+                      /*  Header  */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  backdrop-filter: saturate(1.2) blur(6px);
+  background: color-mix(in oklab, white 80%, transparent);
+  border-bottom: 1px solid var(--stroke);
+}
+
+.bar {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+.pill {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: .65rem 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  background: #fff;
+  transition: transform .12s ease, box-shadow .12s ease;
+  cursor: pointer;
+  user-select: none;
+  font-size: 13px;
+}
+
+.pill:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--ink) 30%, transparent);
+}
+
+.pill:hover {
+  transform: translateY(-1px);
+}
+
+.pill svg {
+  width: 18px;
+  height: 18px;
+}
+
+                            /*  Typography */
+h2 {
+  font-size: clamp(20px, 2vw + 8px, 28px);
+  margin: 24px 0 10px;
+}
+
+p.lead {
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.shop-details .title {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+                          /* Buttons & Inputs  */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: var(--brand);
+  color: #fff;
+  border-radius: var(--radius);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.options {
+  margin: 20px 0;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+select {
+  padding: 8px;
+  border: 1px solid var(--stroke);
+  border-radius: 6px;
+  width: 150px;
+}
+
+                              /* Product Grid  */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.product-grid img{
+  border-radius: var(--radius);
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+                                  /* Carousel  */
+.rail {
+  position: relative;
+  isolation: isolate;
+}
+
+.scroller {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(230px, 1fr);
+  gap: 18px;
+  overflow: auto;
+  padding: 6px 2px 10px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 12px;
+  scrollbar-width: thin;
+}
+
+.scroller::-webkit-scrollbar {
+  height: 10px;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 999px;
+}
+
+.scroller::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+                            /* Cards  */
+.card {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  scroll-snap-align: start;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+}
+
+.media {
+  background: #f6f6f6;
+  aspect-ratio: 5 / 5;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.media img{
+  object-fit: cover;
+  height: 200px; 
+}
+
+.badge {
+  position: absolute;
+  inset: auto 10px 10px auto;
+  background: #111;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: .35rem .55rem;
+  border-radius: 999px;
+}
+
+.body {
+  padding: 14px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brand-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.price {
+  font-weight: 800;
+  font-size: 18px;
+  margin-top: 6px;
+}
+
+                          /*  Carousel Arrows  */
+.arrow {
+  position: absolute;
+  top: 38%;
+  translate: 0 -50%;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: #fff;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform .1s ease, background .15s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.04);
+}
+
+.arrow[disabled] {
+  opacity: .4;
+  pointer-events: none;
+}
+
+.arrow.left {
+  left: -8px;
+}
+
+.arrow.right {
+  right: -8px;
+}
+
+                          /*  Product Colors  */
+
+.color-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.color-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+.shop-details .color-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+                          /* Product Sizes  */
+.size-pills {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.size-pill {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.size-pill:hover {
+  background: #f0f0f0;
+}
+
+.size-pill.selected {
+  background: black;
+  color: white;
+  border-color: black;
+}
+
+
+              /*  Responsive: show grid on wide screens  */
+@media (min-width: 1100px) {
+  .scroller {
+    grid-auto-columns: 1fr;
+  }
+}
+
+                              /*  Footer  */
+footer {
+  margin-top: 36px;
+  color: var(--muted);
+  font-size: 14px;
+}
