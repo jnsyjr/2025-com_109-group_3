@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Product Details</title>
+
+                            <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+                            <!-- Custom CSS -->
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body class="shop-details">
+
+<header>
+  <div class="bar">
+    <div class="logo">LFC adidas DNA </div>
+    <a class="pill" href="shop.html" aria-label="Shop all" style="text-decoration:none;color:inherit;">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Shop All
+    </a>
+  </div>
+</header>
+<div class="bar">
+  <a href="shop.html" style="text-decoration:none;color:inherit;">← Back to Shop</a>
+</div>
+
+<main class="wrap">
+  <div id="productDetails" class="product-grid">
+
+
+               <!-- Loaded dynamically -->
+  </div>
+</main>
+
+
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const productId = parseInt(params.get('id'));
+const money = new Intl.NumberFormat('en-GB', { style:'currency', currency:'GBP' });
+
+$.getJSON('products.json')
+  .done(function(products){
+    const product = products.find(p => p.id === productId);
+    if(!product){
+      $('#productDetails').html('<p>Product not found.</p>');
+      return;
+    }
+
+    $('#productDetails').html(`
+      <div>
+        <img src="${product.image}" alt="${product.title}">
+      </div>
+      <div>
+        <div class="title">${product.title}</div>
+        <div class="muted">Season: ${product.season}</div>
+        <div class="price">${money.format(product.price_gbp)}</div>
+        <p>${product.description}</p>
+        <div class="options">
+        <label>Size</label>
+        <div class="size-pills">
+          ${product.sizes.map(size => `<span class="size-pill" data-size="${size}">${size}</span>`).join('')}
+        </div>
+        <div class="options">
+          <label>Color</label>
+          <span class="color-swatch" style="background-color:${product.color};" title="${product.color}"></span>
+        </div>
+      </div>
+        <a href="#" class="btn add-to-cart">Add to Cart</a>
+      </div>
+    `);
+                          //Select the 1st option when page load
+
+    const $first = $('.size-pill').first();
+    if ($first.length) $first.addClass('selected');
+
+  })
+  .fail(function(){
+    $('#productDetails').html('<p>Could not load product details.</p>');
+  });
+
+                          //Select size option on click
+
+
+  $(document).off('click', '.size-pill').on('click', '.size-pill', function (e) {
+    e.preventDefault();
+    $('.size-pill').removeClass('selected');
+    $(this).addClass('selected');
+  });
+  
+                        //add to cart when clicked the button
+
+                        
+  $(document).off('click', '.add-to-cart').on('click', '.add-to-cart', function (e) {
+    e.preventDefault();
+    const selected = $('.size-pill.selected').data('size');
+    if (!selected) return alert('Please choose a size.');
+    alert('Adding to cart: size ' + selected);
+  });
+
+</script>
+
+</body>
+</html>

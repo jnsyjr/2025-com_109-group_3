@@ -1,0 +1,64 @@
+[
+  {
+    "id": 1,
+    "title": "Home Jersey 2024",
+    "season": "2024/25",
+    "image": "images/s-l1600.png",
+    "description": "Official Liverpool FC home shirt for the 2024 season.",
+    "color": "Red",
+    "sizes": ["S", "M", "L", "XL"],
+    "price_gbp": 74.99,
+    "badge": "New"
+  },
+  {
+    "id": 2,
+    "title": "Scarf ",
+    "season": "2024/25",
+    "image": "images/s23sr01.jpg",
+    "description": "Iconic Liverpool scarf for true fans.",
+    "color": "Black",
+    "sizes": ["One Size"],
+    "price_gbp": 14.99
+  },
+  {
+    "id": 3,
+    "title": "Training Jacket",
+    "season": "2024/25",
+    "image": "images/jacket-track.png",
+    "description": "Wear what the players wear during training.",
+    "color": "Blue",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "price_gbp": 59.99
+  },
+  {
+    "id": 4,
+    "title": "Anfield Mug",
+    "season": "2024/25",
+    "image": "images/dt211_2.jpg",
+    "description": "Classic mug with Anfield print.",
+    "color": "Red",
+    "sizes": ["350ml", "500ml"],
+    "price_gbp": 9.99
+  },
+  {
+    "id": 5,
+    "title": "Retro Jersey 1984",
+    "season": "1984",
+    "image": "images/a13360_1.jpeg",
+    "description": "Celebrate the glory days with this retro 1984 kit.",
+    "color": "Blue",
+    "sizes": ["S", "M", "L", "XL"],
+    "price_gbp": 49.99
+  },
+  {
+    "id": 6,
+    "title": "LFC Beanie Hat",
+    "season": "2024/25",
+    "image": "images/a24li17_1.jpg",
+    "description": "Keep warm and show your pride with the LFC beanie.",
+    "color": "Black",
+    "sizes": ["One Size"],
+    "price_gbp": 19.99
+  }
+]
+
