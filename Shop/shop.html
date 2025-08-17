@@ -1,65 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LFC x adidas DNA —  Shop</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LFC x adidas DNA — Shop</title>
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/navbar/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body class="shop">
+    <header>
+      <div id="navbar-placeholder"></div>
+      <div class="bar">
+        <div class="logo">LFC adidas DNA</div>
+        <button class="pill" id="shopAllBtn" aria-label="Shop all">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M5 12h14M12 5l7 7-7 7"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Shop All
+        </button>
+      </div>
+    </header>
 
-</head>
-<body class="shop">
+    <main class="wrap">
+      <h2>New Season DNA</h2>
+      <p class="lead">
+        Clean red tops, tapered pants, and the LFC crest. Scroll to browse.
+      </p>
 
-<header>
-  <div class="bar">
-    <div class="logo">LFC adidas DNA  </div>
-    <button class="pill" id="shopAllBtn" aria-label="Shop all">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      Shop All
-    </button>
-  </div>
-</header>
+      <section class="rail" aria-label="Products">
+        <button class="arrow left" id="prevBtn" aria-label="Scroll left">
+          ‹
+        </button>
+        <div class="scroller" id="productRail" tabindex="0" role="list"></div>
+        <button class="arrow right" id="nextBtn" aria-label="Scroll right">
+          ›
+        </button>
+      </section>
+    </main>
 
+    <script src="/project.js"></script>
+    <script>
+      // Smooth scroll "Shop All"
+      $("#shopAllBtn").on("click", function () {
+        document
+          .querySelector(".rail")
+          .scrollIntoView({ behavior: "smooth", block: "start" });
+      });
 
-<main class="wrap">
-  <h2>New Season DNA</h2>
-  <p class="lead">Clean red tops, tapered pants, and the LFC crest. Scroll to browse.</p>
+      const money = new Intl.NumberFormat("en-GB", {
+        style: "currency",
+        currency: "GBP",
+      });
 
-  <section class="rail" aria-label="Products">
-    <button class="arrow left" id="prevBtn" aria-label="Scroll left">‹</button>
-    <div class="scroller" id="productRail" tabindex="0" role="list"></div>
-    <button class="arrow right" id="nextBtn" aria-label="Scroll right">›</button>
-  </section>
-
-  
-</main>
-
-<script>
-                  // Smooth scroll "Shop All"
-  $('#shopAllBtn').on('click', function(){
-    document.querySelector('.rail').scrollIntoView({behavior:'smooth', block:'start'});
-  });
-
-  const money = new Intl.NumberFormat('en-GB', { style:'currency', currency:'GBP' });
-
-
-
-                    // Load products from JSON and render
-  $.getJSON('products.json')
-    .done(function(products){
-      const $rail = $('#productRail');
-      products.forEach(p => {
-        const card = $(`
-            <a href="details.html?id=${p.id}" class="card" role="listitem" style="text-decoration:none;color:inherit;">
+      // Load products from JSON and render
+      $.getJSON("products.json")
+        .done(function (products) {
+          const $rail = $("#productRail");
+          products.forEach((p) => {
+            const card = $(`
+            <a href="details.html?id=${
+              p.id
+            }" class="card" role="listitem" style="text-decoration:none;color:inherit;">
               <div class="media">
                 <img loading="lazy" src="${p.image}" alt="${p.title}">
-                ${p.badge ? `<span class="badge">${p.badge}</span>` : ''}
+                ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
               </div>
               <div class="body">
                 <div class="brand-row">
@@ -67,7 +86,9 @@
                 </div>
                 <div class="title">${p.title}</div>
                 <div class="color-row">
-                  <span class="color-swatch" style="background-color:${p.color};"></span>
+                  <span class="color-swatch" style="background-color:${
+                    p.color
+                  };"></span>
                   <span class="color-name">${p.color}</span>
                 </div>
                 <div class="price">${money.format(p.price_gbp)}</div>
@@ -75,47 +96,46 @@
             </a>
           `);
 
-        $rail.append(card);
+            $rail.append(card);
+          });
+          updateArrows();
+        })
+        .fail(function () {
+          $("#productRail").append(
+            `<div class="muted">Couldn't load products.json. Make sure it's in the same folder.</div>`
+          );
+        });
+
+      // Simple scroll controls
+
+      const rail = document.getElementById("productRail");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      function scrollByCards(dir) {
+        const card = rail.querySelector(".card");
+        const delta = card
+          ? (card.getBoundingClientRect().width + 18) * 2
+          : 400;
+        rail.scrollBy({ left: dir * delta, behavior: "smooth" });
+      }
+      prevBtn.addEventListener("click", () => scrollByCards(-1));
+      nextBtn.addEventListener("click", () => scrollByCards(1));
+
+      function updateArrows() {
+        // enable/disable based on scroll position
+
+        const atStart = rail.scrollLeft <= 2;
+        const atEnd =
+          Math.ceil(rail.scrollLeft + rail.clientWidth) >= rail.scrollWidth - 2;
+        prevBtn.toggleAttribute("disabled", atStart);
+        nextBtn.toggleAttribute("disabled", atEnd);
+      }
+      rail?.addEventListener("scroll", () => {
+        // throttle-ish
+        window.requestAnimationFrame(updateArrows);
       });
-      updateArrows();
-    })
-    .fail(function(){
-      $('#productRail').append(
-        `<div class="muted">Couldn't load products.json. Make sure it's in the same folder.</div>`
-      );
-    });
-
-                        // Simple scroll controls
-
-  const rail = document.getElementById('productRail');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-
-  function scrollByCards(dir){
-    const card = rail.querySelector('.card');
-    const delta = card ? (card.getBoundingClientRect().width + 18) * 2 : 400;
-    rail.scrollBy({left: dir * delta, behavior:'smooth'});
-  }
-  prevBtn.addEventListener('click', () => scrollByCards(-1));
-  nextBtn.addEventListener('click', () => scrollByCards(1));
-
-  function updateArrows(){
-                    // enable/disable based on scroll position
-
-    const atStart = rail.scrollLeft <= 2;
-    const atEnd = Math.ceil(rail.scrollLeft + rail.clientWidth) >= rail.scrollWidth - 2;
-    prevBtn.toggleAttribute('disabled', atStart);
-    nextBtn.toggleAttribute('disabled', atEnd);
-
-
-  }
-  rail?.addEventListener('scroll', () => {
-
-                  // throttle-ish
-    window.requestAnimationFrame(updateArrows);
-  });
-  window.addEventListener('resize', updateArrows);
-</script>
-
-</body>
+      window.addEventListener("resize", updateArrows);
+    </script>
+  </body>
 </html>
