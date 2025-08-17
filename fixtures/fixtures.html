@@ -11,13 +11,15 @@
     <header>
       <div id="navbar-placeholder"></div>
     </header>
-
   <main>
     <section id="page-title">
       <h2>Previous and Upcoming Fixtures</h2>
       <p>Below you can find our previous and upcoming games!</p>
       <p>Feel free to select your favourites!</p>
     </section>
+
+    <h2>Pinned Games:</h2>
+    <div id="pinned-games" class="card-container"></div>
 
     <h2>Previous Games:</h2>
     <div id="previous-games" class="card-container"></div>
@@ -30,22 +32,23 @@
         <div class="card-content">
           <h3 class="card-title"></h3>
           <h3 class="card-winner-or-kickoff"></h3>
-          <h3 class = "date"></h4>
-          <h3 class = "kickoff"></h3>
+          <h3 class="date"></h3>
+          <h3 class="kickoff"></h3>
+          <h4 class="score"></h4>
           <p class="card-description"></p>
-          <a href="#" class="card-button">Pin Game</a>
+          <a href="#" class="card-button" id="pin-game-btn"></a>
         </div>
       </div>
     </template>
   </main>
 
-    <footer>
-      <p style="text-align: center; padding: 1rem">
-        &copy; 2025 Liverpool FC Fan Page
-      </p>
-    </footer>
+  <footer>
+    <p style="text-align: center; padding: 1rem">
+      &copy; 2025 Liverpool FC Fan Page
+    </p>
+  </footer>
 
-    <script src="./fixtures.js" defer></script>
-    <script src="/project.js" defer></script>
+  <script src="/project.js" defer></script>
+  <script src="./fixtures.js" defer></script>
   </body>
 </html>

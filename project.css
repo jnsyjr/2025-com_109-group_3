@@ -149,6 +149,15 @@ p {
 }
 /* Card Container - centers the card */
 
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+
 .card-container .card-section {
   display: flex;
   justify-content: center;
