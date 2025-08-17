@@ -148,6 +148,7 @@ p {
   color: black;
 }
 /* Card Container - centers the card */
+
 .card-container .card-section {
   display: flex;
   justify-content: center;
